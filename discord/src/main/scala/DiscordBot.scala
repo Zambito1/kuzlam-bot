@@ -4,7 +4,7 @@
 
 import sx.blah.discord.api.IDiscordClient
 
-object MainRunner {
+object DiscordBot {
     def apply(): Unit = {
         val token = ""
 
