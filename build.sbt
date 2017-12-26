@@ -36,5 +36,12 @@ onLoad in Global := (onLoad in Global).value andThen { s: State => "project serv
 
 
 // Discord4J
+// https://github.com/austinv11/Discord4J
+// https://discord4j.readthedocs.io/en/latest/
 resolvers += "jitpack" at "https://jitpack.io"
 libraryDependencies += "com.github.austinv11" % "Discord4j" % "2.9.3"
+
+
+// Lavaplayer https://github.com/sedmelluq/lavaplayer
+resolvers += "bintray" at "http://jcenter.bintray.com"
+libraryDependencies += "com.sedmelluq" % "lavaplayer" % "1.2.45"
