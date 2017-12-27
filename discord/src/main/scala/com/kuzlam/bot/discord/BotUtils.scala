@@ -20,16 +20,16 @@ object BotUtils {
 
         // This might look weird but it'll be explained in another page.
 
-        RequestBuffer.request((() => {
-            try{
-                channel.sendMessage(message)
-            } catch {
-                case _: DiscordException =>
-                    System.err.println("Message could not be sent with error: ")
+        RequestBuffer.request(new IVoidRequest {
+            override def doRequest(): Unit = {
+                try{
+                    channel.sendMessage(message)
+                } catch {
+                    case e: DiscordException =>
+                        System.err.println("Message could not be sent with error: " + e.getErrorMessage)
+                }
             }
-        }).asInstanceOf[IVoidRequest])
-
-
+        })
     }
 
 }
