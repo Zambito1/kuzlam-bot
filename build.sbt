@@ -45,3 +45,10 @@ libraryDependencies += "com.github.austinv11" % "Discord4j" % "2.9.3"
 // Lavaplayer https://github.com/sedmelluq/lavaplayer
 resolvers += "bintray" at "http://jcenter.bintray.com"
 libraryDependencies += "com.sedmelluq" % "lavaplayer" % "1.2.45"
+
+// scalikejdbc
+libraryDependencies ++= Seq(
+    "org.scalikejdbc" %% "scalikejdbc"       % "3.1.0",
+    "com.h2database"  %  "h2"                % "1.4.196",
+    "ch.qos.logback"  %  "logback-classic"   % "1.2.3"
+)
