@@ -35,10 +35,14 @@ object BotUtils {
         })
     }
 
-    private val logger = new Discord4JLogger("ERROR")
+    private val logger = new Discord4JLogger("LOG")
 
-    def logError(err: String): Unit = {
+    private[discord] def logError(err: String): Unit = {
         logger.error(err)
+    }
+
+    private[discord] def log(str: String): Unit = {
+        logger.info(str)
     }
 
 }
