@@ -1,10 +1,11 @@
+package discord
+
 /**
   * Based on https://discord4j.readthedocs.io/en/latest/Command-structures/?highlight=BotUtils
   */
 
 import sx.blah.discord.api.events.EventSubscriber
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent
-
 
 class CommandHandler {
     @EventSubscriber def onMessageReceived(event: MessageReceivedEvent): Unit = { // Note for error handling, you'll probably want to log failed commands with a logger or sout

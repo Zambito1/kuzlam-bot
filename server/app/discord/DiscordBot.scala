@@ -1,3 +1,5 @@
+package discord
+
 /**
   * Based on https://discord4j.readthedocs.io/en/latest/Command-structures/?highlight=BotUtils
   */
@@ -6,7 +8,7 @@ import sx.blah.discord.api.IDiscordClient
 
 object DiscordBot {
     def apply(): Unit = {
-        val token = ""
+        val token = "Mzk1MzU5MzQzMDgxNDIyODYx.DSRupQ.VkNioYpx1OFcbDR8IHtOJbUND4E"
 
         val cli: IDiscordClient = BotUtils.getBuiltDiscordClient(token)
 

@@ -8,3 +8,5 @@ GET        /                             com.kuzlam.bot.controllers.Application.
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+
+GET        /startbot                     com.kuzlam.bot.controllers.Application.startBot

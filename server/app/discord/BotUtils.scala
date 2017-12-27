@@ -1,3 +1,5 @@
+package discord
+
 /**
   * Based on https://discord4j.readthedocs.io/en/latest/Command-structures/?highlight=BotUtils
   */
