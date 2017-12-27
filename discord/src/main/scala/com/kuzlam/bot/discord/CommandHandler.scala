@@ -10,9 +10,8 @@ import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedE
 class CommandHandler {
     @EventSubscriber def onMessageReceived(event: MessageReceivedEvent): Unit = {
 
-        println(event.getAuthor.getName + ": " + event.getMessage)
-
         // Note for error handling, you'll probably want to log failed commands with a logger or sout
+        BotUtils.logError(event.getAuthor.getName + ": " + event.getMessage)
 
         // In most cases it's not advised to annoy the user with a reply incase they didn't intend to trigger a
         // command anyway, such as a user typing ?notacommand, the bot should not say "notacommand" doesn't exist in
@@ -34,9 +33,6 @@ class CommandHandler {
 
         // Begin the switch to handle the string to command mappings. It's likely wise to pass the whole event or
         // some part (IChannel) to the command handling it
-        commandStr match {
-            case "test" =>
-                BotUtils.sendMessage(event.getChannel, "You ran the test command with args: " + argsList)
-        }
+        Commands.execute(event.getMessage)
     }
 }
