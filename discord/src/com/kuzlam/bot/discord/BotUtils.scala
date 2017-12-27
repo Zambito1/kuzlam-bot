@@ -1,4 +1,4 @@
-package discord
+package com.kuzlam.bot.discord
 
 /**
   * Based on https://discord4j.readthedocs.io/en/latest/Command-structures/?highlight=BotUtils
@@ -6,8 +6,8 @@ package discord
 
 import sx.blah.discord.api.{ClientBuilder, IDiscordClient}
 import sx.blah.discord.handle.obj.IChannel
-import sx.blah.discord.util.{DiscordException, RequestBuffer}
 import sx.blah.discord.util.RequestBuffer.IVoidRequest
+import sx.blah.discord.util.{DiscordException, RequestBuffer}
 
 object BotUtils {
     val BOT_PREFIX = "."
